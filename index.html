@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapnil Das - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            height: auto;
+        }
+
+        .name {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .name h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Main Content Styles */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            max-width: 800px;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .project, .skill {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .project:last-child, .skill:last-child {
+            border-bottom: none;
+        }
+
+        .project h3, .skill h3 {
+            margin-top: 0;
+        }
+
+        .recommendations {
+            margin-bottom: 20px;
+        }
+
+        .recommendations h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .recommendations .recommendation {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .recommendations .recommendation:last-child {
+            margin-bottom: 0;
+        }
+
+        .recommendations form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .recommendations form input[type="text"] {
+            padding: 5px;
+            width: 60%;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .recommendations form button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .recommendations form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Popup Message Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 9999;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="name">
+            <h1>Swapnil Das</h1>
+            <div class="contact-info">
+                <p>Email: swapnildas742@gmail.com</p>
+                <p>Phone: (+91) 8252226321</p>
+                <p>Location: Jamshedpur, Jharkhand-831005, India</p>
+                <a href="https://github.com/swaps361" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/swapnil-das742" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h2>About Me</h2>
+            <p>Results-oriented Computer Science and Engineering student with expertise in Full-Stack Development and Data Science. Possessing hands-on experience in Front-End Development and Deep Learning projects. Aspiring to utilize my technical skills and knowledge to pursue a career as a Data Scientist at Sony Research India.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3><a href="https://recipe-information-using-react.vercel.app/" target="_blank">Responsive Food Recipe Application</a></h3>
+            <p>Developed a responsive and interactive web application using React, JavaScript, HTML and CSS.</p>
+            <p>Implemented features for searching and displaying meal recipes, ensuring a user-friendly experience.</p>
+            <p>Utilized React.js for efficient development and deployment.</p>
+            <p>Deployed the application on Vercel for seamless continuous delivery and hosting.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://paradise-nursery-e-commerce-application.vercel.app/" target="_blank">Paradise Nursery E-Commerce Application</a></h3>
+            <p>Created a responsive and interactive e-commerce web application for an online plant store using React, Redux, HTML, CSS and JavaScript.</p>
+            <p>Implemented Redux for state management and integrated RESTful APIs for seamless data interaction.</p>
+            <p>Ensured responsive design and optimized performance for an enhanced user experience.</p>
+            <p>Deployed the application on Vercel to maintain continuous delivery and hosting.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://drive.google.com/file/d/1q-voRxkKHpyo54PU9pv8cz2tC-CpDH2t/view" target="_blank">Ovarian Cyst Detection using Fuzzy-Inference based MobileNetV2</a></h3>
+            <p>Implemented MobileNetV2 to detect ovarian cysts followed by the generation of synthetic images using deep learning.</p>
+            <p>Utilized TensorFlow and Keras for building and training the MobileNetV2 model.</p>
+            <p>Integrated fuzzy inference systems to enhance the accuracy of ovarian cyst detection.</p>
+        </div>
+        <div class="project">
+            <h3><a href="https://github.com/swaps361/Autoimmune-diseases-diagnosis" target="_blank">Quantitative Analysis of Histopathological Images for Autoimmune Diseases Diagnosis</a></h3>
+            <p>Implemented VGG16 and ResNet50 for feature extraction and accurate disease classification in histopathological images using deep convolutional and residual learning.</p>
+            <p>Utilized deep learning frameworks such as TensorFlow and Keras to build and train the models.</p>
+            <p>Detected patterns in histopathological images to enhance diagnostic accuracy for autoimmune diseases through advanced image processing techniques.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <img src="web_dev_logo.png" alt="Web Development Logo" style="width: 80px; height: auto;">
+            <p>Web Development: HTML, CSS, JavaScript, React.js, Node.js</p>
+        </div>
+        <div class="skill">
+            <img src="data_science_logo.png" alt="Data Science Logo" style="width: 80px; height: auto;">
+            <p>Data Science and Machine Learning: TensorFlow, Keras, Python, Pandas, NumPy</p>
+        </div>
+        <div class="skill">
+            <img src="java_logo.png" alt="Java Logo" style="width: 80px; height: auto;">
+            <p>Programming Languages: Java, C, SQL</p>
+        </div>
+    </section>
+
+    <section id="recommendations" class="recommendations">
+        <h2>Recommendations</h2>
+        <div class="recommendation">
+            <p>It was great working with Swapnil. Highly recommend!</p>
+        </div>
+        <div class="recommendation">
+            <p>Swapnil is very dedicated and knowledgeable. A pleasure to work with!</p>
+        </div>
+        <form id="recommendationForm">
+            <input type="text" id="newRecommendation" placeholder="Enter new recommendation">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Swapnil Das. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup Message -->
+    <div class="popup" id="popupMessage">
+        <p>Recommendation submitted successfully!</p>
+    </div>
+
+    <!-- Home Icon -->
+    <a href="#" class="home-icon">&#8962;</a>
+
+    <!-- Blank Section -->
+    <section id="blank-section"></section>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript for Popup Message and Adding Recommendations
+        document.getElementById('recommendationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simulate submission (in real scenario, handle backend and database here)
+            var newRecommendation = document.getElementById('newRecommendation').value;
+            if (newRecommendation.trim() !== '') {
+                // Create a new recommendation element
+                var recommendationDiv = document.createElement('div');
+                recommendationDiv.className = 'recommendation';
+                recommendationDiv.innerHTML = '<p>' + newRecommendation + '</p>';
+                // Append new recommendation to the recommendations section
+                var recommendationsSection = document.getElementById('recommendations');
+                recommendationsSection.insertBefore(recommendationDiv, document.getElementById('recommendationForm'));
+                // Display popup message
+                document.getElementById('popupMessage').style.display = 'block';
+                // Clear input field
+                document.getElementById('newRecommendation').value = '';
+                // Hide popup message after 3 seconds
+                setTimeout(function() {
+                    document.getElementById('popupMessage').style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
